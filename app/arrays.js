@@ -12,11 +12,7 @@ exports.arraysAnswers = {
   },
 
   sum(arr) {
-    let runningSum = 0;
-    for(let i = 0; i < arr.length; i++) {
-      runningSum += arr[i];
-    }
-    return runningSum;
+    return arr.reduce((total, num) => total + num, 0);
   },
 
   remove(arr, item) {
@@ -76,11 +72,11 @@ exports.arraysAnswers = {
 
   count(arr, item) {
     let count = 0;
-    for(let i = 0; i < arr.length; i++) {
-      if(arr[i] === item) {
+    arr.forEach((num) => {
+      if(num === item) {
         count++;
       }
-    }
+    });
     return count;
   },
 
@@ -99,10 +95,11 @@ exports.arraysAnswers = {
   },
 
   square(arr) {
-    for(let i = 0; i < arr.length; i++) {
-      arr[i] *= arr[i];
-    }
-    return arr;
+    const squares = []
+    arr.forEach((num) => {
+      squares.push(num * num);
+    });
+    return squares;
   },
 
   findAllOccurrences(arr, target) {
