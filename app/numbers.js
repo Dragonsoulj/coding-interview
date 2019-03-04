@@ -25,16 +25,10 @@ exports.numbersAnswers = {
       newA = a * Math.pow(10, lenA - positionA - 1);
       finalPower += (lenA - positionA - 1);
     }
-    console.log(finalPower);
     if(positionB != -1) {
       newB = b * Math.pow(10, lenB - positionB - 1);
       finalPower += (lenB - positionB - 1);
     }
-    console.log(a);
-    console.log(b);
-    console.log(newA);
-    console.log(newB);
-    console.log(finalPower);
     return (newA * newB) / Math.pow(10, finalPower);
   }
 };

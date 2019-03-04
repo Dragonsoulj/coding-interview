@@ -3,12 +3,15 @@ exports = typeof window === 'undefined' ? global : window;
 exports.arraysAnswers = {
   indexOf(arr, item) {
     let firstIndex = -1;
-    for(let i = 0; i < arr.length; i++) {
-      if(arr[i] === item && firstIndex == -1) {
-        firstIndex = i;
+    let indexFound = false;
+    arr.forEach((num) => {
+      !indexFound ? firstIndex ++ : false;
+      if(num === item) {
+        indexFound = true;
+        return;
       }
-    }
-    return firstIndex;
+    });
+    return indexFound ? firstIndex : -1;
   },
 
   sum(arr) {

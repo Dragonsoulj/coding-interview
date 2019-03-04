@@ -1,15 +1,15 @@
 exports = typeof window === 'undefined' ? global : window;
 
 exports.stringsAnswers = {
-  reduceString: function(str, amount) {
-    return str.substr(amount);
-  },
-
-  wordWrap: function(str, cols) {
+  reduceString(str, amount) {
 
   },
 
-  reverseString: function(str) {
+  wordWrap(str, cols) {
+
+  },
+
+  reverseString(str) {
     return str.split('').reverse().join('');
   }
 };
